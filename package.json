@@ -1,0 +1,25 @@
+{
+  "name": "peg-solitaire",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Peg Solitaire — the classic jump-and-remove board puzzle, with undo, hints and a solver.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "wrangler": "^4.42.0"
+  }
+}

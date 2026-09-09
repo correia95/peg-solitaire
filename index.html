@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#b45309" />
+
+    <title>Peg Solitaire — the jump-and-remove board puzzle, online</title>
+    <meta
+      name="description"
+      content="Play peg solitaire online. Jump a peg over another into an empty hole to remove it, and clear the board to one peg. English, European and triangle boards, with undo, a hint and a solver. Free, no sign-up, works offline."
+    />
+    <link rel="canonical" href="https://peg-solitaire.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Peg Solitaire" />
+    <meta property="og:description" content="The classic jump-and-remove board puzzle — English, European and triangle boards, with undo, a hint and a solver." />
+    <meta property="og:url" content="https://peg-solitaire.correia95.workers.dev/" />
+    <meta property="og:image" content="https://peg-solitaire.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Peg Solitaire" />
+    <meta name="twitter:description" content="The classic peg-jumping puzzle with three board shapes, undo, hint and a solver. Free, works offline." />
+    <meta name="twitter:image" content="https://peg-solitaire.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Peg Solitaire",
+        "url": "https://peg-solitaire.correia95.workers.dev/",
+        "applicationCategory": "Game",
+        "genre": "Puzzle",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "A browser version of peg solitaire: each move jumps a peg over an adjacent peg into an empty hole and removes the jumped peg, and the goal is to leave a single peg, ideally in the centre. Includes the English 33-hole, European 37-hole and 15-hole triangle boards with undo, a hint and a search-based solver."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you play peg solitaire?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Move a peg by jumping it over an adjacent peg into an empty hole directly beyond. The peg you jumped over is removed. Keep making jumps until you cannot move; you win if a single peg is left."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can peg solitaire always be solved?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On the standard English board starting with only the centre hole empty, yes — it can always be finished with the last peg in the centre, in 31 moves. Other starting holes and the European board have their own constraints, and careless play can strand pegs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best first move?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "From the standard centre-empty start all four opening jumps are symmetric, so it does not matter. What matters is not clearing one arm of the cross completely and leaving isolated pegs elsewhere."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the triangle peg game?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 15-hole triangular board often found on restaurant tables. You start with one hole empty and jump along the three edges of the triangle. Leaving one peg is 'genius'; most people finish with three or four."
+            }
+          }
+        ]
+      }
+    </script>
+    <style>
+      .tt-nav { box-sizing: border-box; width: 100%; margin: 0; background: #f1f1f4; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .tt-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; text-decoration: none; color: #3730a3; font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .tt-nav a:hover { color: #1e1b4b; text-decoration: underline; }
+      .tt-nav svg { width: 14px; height: 14px; flex: none; }
+      @media (prefers-color-scheme: dark) {
+        .tt-nav { background: #15151b; border-bottom-color: rgba(255, 255, 255, 0.12); }
+        .tt-nav a { color: #c7d2fe; }
+        .tt-nav a:hover { color: #e0e7ff; }
+      }
+      @media print { .tt-nav { display: none !important; } }
+    </style>
+  </head>
+  <body>
+    <nav class="tt-nav"><a href="https://tinytools.correia95.workers.dev/" aria-label="TinyTools home — all tools and games"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg><span>TinyTools</span></a></nav>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">Peg Solitaire needs JavaScript. Jump pegs over each other into empty holes to clear the board.</p>
+    </noscript>
+  </body>
+</html>
